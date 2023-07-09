@@ -1,0 +1,21 @@
+.App {
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.banner {
+  font-size: 4.5em;
+  margin:0;
+  text-align: center;
+  color: darkslategray;
+}
+.banner-sm {
+  font-size: 1.75em;
+  margin:0;
+  text-align: center;
+  color: darkslategray;
+}
