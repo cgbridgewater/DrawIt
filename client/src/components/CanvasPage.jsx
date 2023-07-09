@@ -119,7 +119,6 @@ const Canvas = () => {
                     <button type="button" value="#e8c4e8"/>
                     <button type="button" value="#ffffff"/>
                 </div>
-                {/* <div className="clock">CLOCK <br /> GOES <br /> HERE! <br /> MAYBE?</div> */}
                 <Logo/>
                 <div className="brushes">
                     <button type="button" value="3"/>
