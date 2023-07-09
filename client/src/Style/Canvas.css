@@ -20,6 +20,7 @@
     background-color: #315659;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .canvas-block {
