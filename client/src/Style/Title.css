@@ -1,0 +1,78 @@
+section {
+    display: flex;
+
+}
+section > p {
+    font-family: 'Merriweather', serif;
+    font-size: 3em;
+    cursor: default; /* to keep the cursor the same */
+    opacity: 0;
+	animation: fadeIn .1s ease-in both;
+}
+
+
+/* animate each letter individually */
+
+section p:first-child {
+	animation-delay: .5s;
+}
+section p:nth-child(2) {
+	animation-delay: 1s;
+}
+section p:nth-child(3) {
+	animation-delay: 1.5s;
+}
+section p:nth-child(6) {
+	animation-delay: 2s;
+}
+
+section p:nth-child(7) {
+	animation-delay: 2.5s;
+}
+section p:nth-child(8) {
+	animation-delay: 3s;
+}
+section p:nth-child(11) {
+	animation-delay: 3.5s;
+}
+section p:nth-child(12) {
+	animation-delay: 4s;
+}
+
+section p:nth-child(13) {
+	animation-delay: 4.5s;
+}
+section p:nth-child(14) {
+	animation-delay: 5s;
+}
+section p:nth-child(15) {
+	animation-delay: 5.5s;
+}
+section p:nth-child(16) {
+	animation-delay: 6s;
+}
+
+section p:nth-child(17) {
+	animation-delay: 6.5s;
+}
+
+section p:nth-child(18) {
+	animation-delay: 7s;
+}
+
+section p:nth-child(19) {
+	animation-delay: 7.5s;
+}
+
+/* Keyframe for animation  */
+
+@keyframes fadeIn {
+ 0% {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
