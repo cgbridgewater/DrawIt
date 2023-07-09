@@ -2,6 +2,8 @@ import Canvas from "./CanvasPage"
 // import Logo from "./LogoPage";
 import '../Style/Canvas.css';
 import '../Style/Logo.css';
+import '../Style/Title.css';
+import Title from "./TitlePage";
 
 
 const Indexpage = () => {
@@ -9,11 +11,9 @@ const Indexpage = () => {
     return(    
 
         <div>
-            <h1 className="banner">Can You <em>Remember?</em></h1>
-            <h1 className="banner-sm">Draw the logo from memory!!</h1>
+            <Title/>
             <div className="flex" >
                 <Canvas/>
-                {/* <Logo/> */}
             </div>
         </div>
 

@@ -1,9 +1,9 @@
 .logo-container {
   width: 250px;
-  /* height:450px; */
+  height:50px;
   /* border: 1px solid #e0e0e0; */
-  padding: 10px;
-  margin: 1% 0;
+  /* padding: 10px; */
+  /* margin: 1% 0; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,21 +27,7 @@
 
 
 /* // Modal CSS // */
-/* * {
-  padding:0;
-  margin:0;
-  position:relative;
-  box-sizing:border-box;
-} */
-/* html {
-  height:100%;
-  min-height:100%;
-} */
 
-.wrap {
-  height:100%;
-  top:0px;
-}
 svg {
   width:390px;
   height:390px;
@@ -53,7 +39,7 @@ svg {
 }
 svg line {
   stroke-width:2px;
-   stroke:rgba(2,162,239,1);
+  stroke:rgba(2,162,239,1);
 }
 svg #svg_2 {
 	stroke-dasharray: 1680;
@@ -83,13 +69,13 @@ svg #svg_5 {
 }
 
 .overlay {
-  background:rgba(0,0,0,.5);
+  background:rgba(0,0,0,.6);
   border: 1px solid #e0e0e0;
-  width:69%;
-  height:44%;
+  width:67%;
+  height:107%;
   position:absolute;
-  top:10;
-  left:10;
+  top: -3%;
+  left: 10;
   opacity:0;
   z-index:-999;
 }
@@ -100,7 +86,7 @@ svg #svg_5 {
   height:300px;
   top:50%;
   left:50%;
-  transform:translate(-100%,-141%);
+  transform:translate(-100%,-131%);
   color: #424242;
 }
 
@@ -130,13 +116,13 @@ svg #svg_5 {
   height:20px;
   width:20px;
 }
-
+/* 
 .modal-inner h3 {
   display:block;
   text-align:center;
   font-size:22px;
-  /* padding:20px 20px 10px 20px; */
-}
+  padding:20px 20px 10px 20px;
+} */
 
 .modal-flex {
   display: flex;
@@ -168,14 +154,14 @@ svg #svg_5 {
 }
 
 a.modal-open {
-  display:block;
+  /* display:block; */
   padding:15px;
   color:#424242;
   border: 1px solid #424242;
   background: #FFEEDB;
   font-weight:800;
   margin:0 auto;
-  transform:translateY(100%);
+  transform:translateY(60%);
   width:160px;
   border-radius:2px;
   text-align:center;

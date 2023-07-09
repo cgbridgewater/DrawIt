@@ -126,7 +126,6 @@ const Canvas = () => {
                     <button type="button" value="15"/>
                 </div>
             </div>
-
         </main>
     )
 }
