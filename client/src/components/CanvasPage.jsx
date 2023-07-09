@@ -1,3 +1,5 @@
+import Logo from "./LogoPage";
+
 const Canvas = () => {
 
     window.onload = function () {
@@ -6,144 +8,84 @@ const Canvas = () => {
         var canvas = document.getElementById("paint-canvas");
         var context = canvas.getContext("2d");
         var boundings = canvas.getBoundingClientRect();
-      
+
         // Specifications
         var mouseX = 0;
         var mouseY = 0;
         context.strokeStyle = 'black'; // initial brush color
-        context.lineWidth = 1; // initial brush width
+        context.lineWidth = 3; // initial brush width
         var isDrawing = false;
-      
-      
+
+
         // Handle Colors
         var colors = document.getElementsByClassName('colors')[0];
-      
         colors.addEventListener('click', function(event) {
-          context.strokeStyle = event.target.value || 'black';
+            context.strokeStyle = event.target.value || 'black';
         });
-      
+
         // Handle Brushes
         var brushes = document.getElementsByClassName('brushes')[0];
-      
         brushes.addEventListener('click', function(event) {
-          context.lineWidth = event.target.value || 1;
+            context.lineWidth = event.target.value || 9;
         });
-      
+
         // Mouse Down Event
         canvas.addEventListener('mousedown', function(event) {
-          setMouseCoordinates(event);
-          isDrawing = true;
-      
-          // Start Drawing
-          context.beginPath();
-          context.moveTo(mouseX, mouseY);
+            setMouseCoordinates(event);
+            isDrawing = true;
+        // Start Drawing
+            context.beginPath();
+            context.moveTo(mouseX, mouseY);
         });
-      
+
         // Mouse Move Event
         canvas.addEventListener('mousemove', function(event) {
-          setMouseCoordinates(event);
-      
-          if(isDrawing){
+            setMouseCoordinates(event);
+            if(isDrawing){
             context.lineTo(mouseX, mouseY);
             context.stroke();
-          }
+            }
         });
-      
+        
         // Mouse Up Event
         canvas.addEventListener('mouseup', function(event) {
-          setMouseCoordinates(event);
-          isDrawing = false;
+            setMouseCoordinates(event);
+            isDrawing = false;
         });
-      
+        
         // Handle Mouse Coordinates
         function setMouseCoordinates(event) {
-          mouseX = event.clientX - boundings.left;
-          mouseY = event.clientY - boundings.top;
+            mouseX = event.clientX - boundings.left ;
+            mouseY = event.clientY - boundings.top ;
         }
-      
+
+        // Handle Touch Coordinates
+        function setTouchCoordinates(event) {
+            mouseX = event.targetTouches[0].pageX - boundings.left;
+            mouseY = event.targetTouches[0].pageY - boundings.top;
+            var msg = `touch: ${mouseX} ${mouseY}`;
+            console.log(msg);
+        }
+        
         // Handle Clear Button
         var clearButton = document.getElementById('clear');
-      
         clearButton.addEventListener('click', function() {
-          context.clearRect(0, 0, canvas.width, canvas.height);
+            context.clearRect(0, 0, canvas.width, canvas.height);
         });
-      
-
-      };
-      
+    };
 
 
-    // window.onload = function () {
-
-    //     // Definitions
-    //     var canvas = document.getElementById("paint-canvas");
-    //     var context = canvas.getContext("2d");
-    //     var boundings = canvas.getBoundingClientRect();
-
-
-    //     // Specifications
-    //     var mouseX = 0;
-    //     var mouseY = 0;
-    //     context.strokeStyle = 'black'; // initial brush color
-    //     context.lineWidth = 1; // initial brush width
-    //     var isDrawing = false;
-
-    //     // Handle Colors
-    //     var colors = document.getElementsByClassName('colors')[0];
-
-    //     colors.addEventListener('click', function(event) {
-    //         context.strokeStyle = event.target.value || 'black';
-    //     });
-
-    //     // Handle Brushes
-    //     var brushes = document.getElementsByClassName('brushes')[0];
-
-    //     brushes.addEventListener('click', function(event) {
-    //         context.lineWidth = event.target.value || 1;
-    //     });
-
-    //     // Mouse Down Event
-    //     canvas.addEventListener('mousedown', function(event) {
-    //         setMouseCoordinates(event);
-    //         isDrawing = true;
-
-    //         // Start Drawing
-    //         context.beginPath();
-    //         context.moveTo(mouseX, mouseY);
-    //     });
-
-    //     // Mouse Move Event
-    //     canvas.addEventListener('mousemove', function(event) {
-    //         setMouseCoordinates(event);
-
-    //         if(isDrawing){
-    //             context.lineTo(mouseX, mouseY);
-    //             context.stroke();
-    //         }
-    //     });
-
-    //     // Mouse Up Event
-    //     canvas.addEventListener('mouseup', function(event) {
-    //         setMouseCoordinates(event);
-    //         isDrawing = false;
-    //     });
-
-    //     // Handle Mouse Coordinates
-    //     function setMouseCoordinates(event) {
-    //         mouseX = event.clientX - boundings.left;
-    //         mouseY = event.clientY - boundings.top;
-    //     }
-
-    //     // Handle Clear Button
-    //     var clearButton = document.getElementById('clear');
-
-    //         clearButton.addEventListener('click', function() {
-    //         context.clearRect(0, 0, canvas.width, canvas.height);
-    //     });
-    // };
 
     return(    
         <main className="canvas-container">
+            <div className="buttons">
+                <button id="clear" type="button">Clear</button>
+                <h3 className="image-title">Draw : <span className="image-name">Tesla's</span> Logo </h3>
+                <button id="next" type="button">Next ➡️</button>
+            </div>
+            <div className="canvas-block">
+                <canvas id="paint-canvas" width="640" height="400"></canvas>
+            </div>
             <div className="brush-block">
                 <div className="colors">
                     <button type="button" value="#0000ff"/>
@@ -177,19 +119,15 @@ const Canvas = () => {
                     <button type="button" value="#e8c4e8"/>
                     <button type="button" value="#ffffff"/>
                 </div>
+                {/* <div className="clock">CLOCK <br /> GOES <br /> HERE! <br /> MAYBE?</div> */}
+                <Logo/>
                 <div className="brushes">
                     <button type="button" value="3"/>
                     <button type="button" value="9"/>
                     <button type="button" value="15"/>
                 </div>
             </div>
-            <div className="canvas-block">
-                <canvas id="paint-canvas" width="640" height="400"></canvas>
-            </div>
-            <div className="buttons">
-                    <button id="clear" type="button">Clear</button>
-                    <button id="next" type="button">Next ➡️</button>
-            </div>
+
         </main>
     )
 }
