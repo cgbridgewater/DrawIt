@@ -1,7 +1,7 @@
 import Logo from "./LogoPage";
+import { useState } from "react";
 
 const Canvas = () => {
-
     window.onload = function () {
 
         // Definitions
@@ -15,7 +15,6 @@ const Canvas = () => {
         context.strokeStyle = 'black'; // initial brush color
         context.lineWidth = 3; // initial brush width
         var isDrawing = false;
-
 
         // Handle Colors
         var colors = document.getElementsByClassName('colors')[0];
@@ -46,13 +45,13 @@ const Canvas = () => {
             context.stroke();
             }
         });
-        
+
         // Mouse Up Event
         canvas.addEventListener('mouseup', function(event) {
             setMouseCoordinates(event);
             isDrawing = false;
         });
-        
+
         // Handle Mouse Coordinates
         function setMouseCoordinates(event) {
             mouseX = event.clientX - boundings.left ;
@@ -74,19 +73,21 @@ const Canvas = () => {
         });
     };
 
-
-
     return(    
         <main className="canvas-container">
+            {/* top bar div */}
             <div className="buttons">
                 <button id="clear" type="button">Clear</button>
-                <h3 className="image-title">Draw : <span className="image-name">Tesla's</span> Logo </h3>
+                <h3 className="image-title">Draw The <span className="image-name">Tesla</span> Logo </h3>
                 <button id="next" type="button">Next ➡️</button>
             </div>
+            {/* canvas div */}
             <div className="canvas-block">
                 <canvas id="paint-canvas" width="640" height="400"></canvas>
             </div>
+            {/* bottom div */}
             <div className="brush-block">
+                {/* brush color */}
                 <div className="colors">
                     <button type="button" value="#0000ff"/>
                     <button type="button" value="#009fff"/>
@@ -119,7 +120,9 @@ const Canvas = () => {
                     <button type="button" value="#e8c4e8"/>
                     <button type="button" value="#ffffff"/>
                 </div>
+                {/* logo reveal button */}
                 <Logo/>
+                {/* brush */}
                 <div className="brushes">
                     <button type="button" value="3"/>
                     <button type="button" value="9"/>
