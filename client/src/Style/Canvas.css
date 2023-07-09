@@ -9,13 +9,15 @@
     padding: 10px;
     margin: 1% 0;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    /* background-color: #0D0221; */
+    background:rgba(0,0,0,.5);
 }
 
 .brush-block {
     width: 640px;
-    border: 1px solid #ece8e8;
-    background-color: #ece8e8;
+    border: 1px solid #315659;
+    background-color: #315659;
     display: flex;
     justify-content: space-between;
 }
@@ -24,11 +26,10 @@
     /* width: 640px; */
     width: 100%;
     min-width: 370px;
-    border: 1px solid #ece8e8;
 }
 
 .colors {
-    background-color: #ece8e8;
+    background-color: #315659;
     padding-bottom: 5px;
     padding-top: 10px;
     width: 200px;
@@ -36,14 +37,14 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border-right:1px solid #666666;
+    border-right:1px solid #029BE7;
 }
 
 .colors button {
     display: flex;
     border: 1px solid #00000026;
     border-radius: 0;
-    outline: none;
+    border: 1px solid #FFEEDB;
     cursor: pointer;
     width: 20px;
     height: 20px;
@@ -200,7 +201,7 @@
 }
 
 .brushes {
-    border-left:1px solid #666666;
+    border-left:1px solid #029BE7;
 }
 
 .brushes button {
@@ -209,7 +210,7 @@
     align-items: center;
     border: 0;
     border-radius: 0;
-    background-color: #ece8e8;
+    background-color: #315659;
     margin: 5px;
     padding: 5px;
     height: 30px;
@@ -224,7 +225,7 @@
     height: 1px;
     width: 200px;
     display: flex;
-    background: #808080;
+    background: #0D0221;
     content: '';
 }
 
@@ -252,9 +253,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    border: 1px solid grey;
-    background-color: #ece8e8;
+    width: 100px;
+    border: 1px solid #424242;
+    color: #424242;
+    font-weight: 800;
+    background-color: #FFEEDB;
     margin-bottom: 5px;
     padding: 5px;
     height: 30px;
@@ -266,5 +269,14 @@
 
 #paint-canvas {
     cursor:crosshair;
+    background-color: #C2E7D9;
 }
 
+.clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFEEDB;
+
+}
