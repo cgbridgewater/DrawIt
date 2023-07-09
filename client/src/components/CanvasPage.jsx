@@ -59,13 +59,13 @@ const Canvas = () => {
             mouseY = event.clientY - boundings.top ;
         }
 
-        // Handle Touch Coordinates
-        function setTouchCoordinates(event) {
-            mouseX = event.targetTouches[0].pageX - boundings.left;
-            mouseY = event.targetTouches[0].pageY - boundings.top;
-            var msg = `touch: ${mouseX} ${mouseY}`;
-            console.log(msg);
-        }
+        // // Handle Touch Coordinates
+        // function setTouchCoordinates(event) {
+        //     mouseX = event.targetTouches[0].pageX - boundings.left;
+        //     mouseY = event.targetTouches[0].pageY - boundings.top;
+        //     var msg = `touch: ${mouseX} ${mouseY}`;
+        //     console.log(msg);
+        // }
         
         // Handle Clear Button
         var clearButton = document.getElementById('clear');

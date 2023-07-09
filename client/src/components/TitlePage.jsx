@@ -6,8 +6,6 @@ const Title = () => {
     return(    
 
         <div>
-            <h1 className="banner">Can You <em>Remember?</em></h1>
-            <h1 className="banner-sm">Draw the logo from memory!!</h1>
             <main>
                 <section>
                     <p>C</p>
@@ -20,15 +18,17 @@ const Title = () => {
                     <p>U</p>
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>
-                    <p>R</p>
-                    <p>E</p>
-                    <p>M</p>
-                    <p>E</p>
-                    <p>M</p>
-                    <p>B</p>
-                    <p>E</p>
-                    <p>R</p>
+                    <p><em>R</em></p>
+                    <p><em>E</em></p>
+                    <p><em>M</em></p>
+                    <p><em>E</em></p>
+                    <p><em>M</em></p>
+                    <p><em>B</em></p>
+                    <p><em>E</em></p>
+                    <p><em>R</em></p>
+                    <p><em>?</em></p>
                 </section>
+                <h1 className="banner-sm">Draw the logo from memory!!</h1>
             </main>
         </div>
 
