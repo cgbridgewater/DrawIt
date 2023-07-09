@@ -19,6 +19,7 @@
 
 .image-name {
   color: red;
+  font-weight: 800;
 }
 
 .image-title {
@@ -43,7 +44,7 @@ svg line {
 }
 svg #svg_2 {
 	stroke-dasharray: 1680;
-  stroke-dashoffset: 1680;
+  stroke-dashoffset: -390;
 }
 svg #svg_4 {
 	stroke-dasharray: 1680;
