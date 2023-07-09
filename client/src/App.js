@@ -1,6 +1,7 @@
 import { BrowserRouter,Routes,Route,Navigate } from 'react-router-dom'
-import './App.css';
-import Indexpage from './components/IndexPage';
+import './Style/App.css';
+// import './Style/Canvas.css';
+import Indexpage from './Components/IndexPage';
 
 function App() {
   return (
