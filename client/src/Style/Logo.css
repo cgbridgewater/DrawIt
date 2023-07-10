@@ -25,6 +25,8 @@
 }
 
 
+
+
 /* // Modal CSS // */
 svg {
   width:390px;
@@ -110,21 +112,24 @@ svg #svg_5 {
 
 .modal-close {
   float:right;
-  z-index:+2;
-  color:red;
-  margin:5px 5px 0 0;
-  font-size:20px;
+  z-index:+99;
+  color:#424242;
+  border: 1px solid #424242;
+  border-radius: 1px;
+  background-color: #FFEEDB;
+  margin:2px;
+  /* font-size:20px; */
   font-weight:800;
   text-decoration:none;
   text-align:center;
-  line-height:20px;
-  height:20px;
-  width:20px;
+  /* line-height:20px; */
+  /* height:20px; */
+  width:100px;
 }
 
 .modal-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 385px;
   height: 35px;

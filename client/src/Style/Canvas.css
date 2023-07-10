@@ -201,8 +201,18 @@
     margin:2px;
 }
 
+.colors button:nth-of-type(31) {
+    background-color: #C2E7D9;
+    margin:2px;
+}
+
 .brushes {
     border-left:1px solid #029BE7;
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding:10px;
 }
 
 .brushes button {
@@ -250,7 +260,7 @@
     justify-content: space-between;
 }
 
-.buttons button {
+.buttons button, #next, #xImage {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -272,11 +282,3 @@
     cursor:crosshair;
     background-color: #C2E7D9;
 }
-
-/* .clock {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #FFEEDB;
-} */
