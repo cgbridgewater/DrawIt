@@ -1,9 +1,14 @@
-import Logo from "./LogoPage";
 import { useState } from "react";
 
 const Canvas = () => {
-    window.onload = function () {
 
+    const [logoName, setLogoName] = useState("Beats")
+    const [count, setCount] = useState(-1)
+    const LOGO = require(`../Assets/Images/${logoName}.png`);
+
+    window.onload = function () {
+        console.log(count)
+        counter(count);
         // Definitions
         var canvas = document.getElementById("paint-canvas");
         var context = canvas.getContext("2d");
@@ -71,15 +76,106 @@ const Canvas = () => {
         clearButton.addEventListener('click', function() {
             context.clearRect(0, 0, canvas.width, canvas.height);
         });
+
+        // Handle Next Button
+        var nextButton = document.getElementById('next');
+        nextButton.addEventListener('click', function() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        });
+
+        // Handle xImage Button
+        var xImage = document.getElementById('xImage');
+        xImage.addEventListener('click', function() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        });
     };
+
+    // Count and Image Switch Case Loop
+    function counter(count){
+        let name=''
+        count++
+        if(count > 19){
+            count=0;
+            name = "Apple"
+            setCount(count)
+            console.log("flip to :", count);
+            setLogoName(name)
+            return name
+        }
+            switch(count) {
+            case 1 :
+                name = "Tesla"
+                break;
+            case 2 :
+                name = "Amazon"
+                break;
+            case 3 :
+                name = "McDonalds"
+                break;
+            case 4 :
+                name = "Baskin-Robbins"
+                break;
+            case 5 :
+                name = "Volkswagen"
+                break;
+            case 6 :
+                name = "Mercedes-Benz"
+                break;
+            case 7 :
+                name = "Visa"
+                break;
+            case 8 :
+                name = "PayPal"
+                break;
+            case 9 :
+                name = "Nike"
+                break;
+            case 10 :
+                name = "Target"
+                break;
+            case 11 :
+                name = "Adidas"
+                break;
+            case 12 :
+                name = "Vans"
+                break;
+            case 13 :
+                name = "Beats"
+                break;
+            case 14 :
+                name = "BMW"
+                break;
+            case 15 :
+                name = "FedEx"
+                break;
+            case 16 :
+                name = "Audi"
+                break;
+            case 17 :
+                name = "Google"
+                break;
+            case 18 :
+                name = "Dell"
+                break;
+            case 19 :
+                name = "Nasa"
+                break;
+            default:
+                name = "Apple"
+        }
+        // console.log("Count :", count);
+        setCount(count)
+        setLogoName(name)
+        return name
+    }
 
     return(    
         <main className="canvas-container">
             {/* top bar div */}
             <div className="buttons">
                 <button id="clear" type="button">Clear</button>
-                <h3 className="image-title">Draw The <span className="image-name">Tesla</span> Logo </h3>
-                <button id="next" type="button">Next ➡️</button>
+                <h3 className="image-title">Draw The <span className="image-name">{logoName}</span> Logo </h3>
+                <button id="next" type="button" onClick={(e) => counter(count)} >Next ➡️</button>
             </div>
             {/* canvas div */}
             <div className="canvas-block">
@@ -120,8 +216,31 @@ const Canvas = () => {
                     <button type="button" value="#e8c4e8"/>
                     <button type="button" value="#ffffff"/>
                 </div>
-                {/* logo reveal button */}
-                <Logo/>
+                {/* logo reveal button and image */}
+                <div className="logo-container" >
+                    {/* <h3 className="image-title">Draw : <span className="image-name">Tesla's Logo</span> </h3> */}
+                    <div className="wrap">
+                        <a href="#show" className="modal-open">Click To Show</a>
+                        <div className="overlay" id="show">
+                            <div className="modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 400">
+                                    <line id="svg_3" fill="none" stroke="#000000" strokeWidth="2" x1="2.0" y1="2.0" x2="398" y2="2.0"/>
+                                    <line id="svg_2" fill="none" stroke="#000000" strokeWidth="2" x1="398" y1="398" x2="2.0" y2="398"/>
+                                    <line id="svg_4" fill="none" stroke="#000000" strokeWidth="2" x1="398" y1="398" x2="398" y2="2.0"/>
+                                    <line id="svg_5" fill="none" stroke="#000000" strokeWidth="2" x1="2.0" y1="2.0" x2="2.0" y2="398"/>
+                                </svg>
+                                <div className="modal-inner">
+                                    <div className="modal-flex">
+                                        <div></div>
+                                        <h3 className="image-title">{logoName}</h3>
+                                        <a id="xImage" onClick={(e) => counter(count)} href="#" className="modal-close" title="Close Modal">X</a>
+                                    </div>
+                                    <img className="image-block" src={LOGO} alt={logoName} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {/* brush */}
                 <div className="brushes">
                     <button type="button" value="3"/>
