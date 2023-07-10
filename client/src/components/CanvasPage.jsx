@@ -4,10 +4,11 @@ const Canvas = () => {
 
     const [logoName, setLogoName] = useState("Beats")
     const [count, setCount] = useState(-1)
+    const [isDisabled, setIsDisabled] = useState(false)
     const LOGO = require(`../Assets/Images/${logoName}.png`);
 
     window.onload = function () {
-        console.log(count)
+        // initialize count
         counter(count);
         // Definitions
         var canvas = document.getElementById("paint-canvas");
@@ -82,12 +83,13 @@ const Canvas = () => {
         nextButton.addEventListener('click', function() {
             context.clearRect(0, 0, canvas.width, canvas.height);
         });
-
+        
         // Handle xImage Button
-        var xImage = document.getElementById('xImage');
-        xImage.addEventListener('click', function() {
-            context.clearRect(0, 0, canvas.width, canvas.height);
-        });
+        // var xImage = document.getElementById('xImage');
+        // xImage.addEventListener('click', function() {
+        //     context.clearRect(0, 0, canvas.width, canvas.height);
+        // });
+
     };
 
     // Count and Image Switch Case Loop
@@ -98,7 +100,6 @@ const Canvas = () => {
             count=0;
             name = "Apple"
             setCount(count)
-            console.log("flip to :", count);
             setLogoName(name)
             return name
         }
@@ -173,9 +174,9 @@ const Canvas = () => {
         <main className="canvas-container">
             {/* top bar div */}
             <div className="buttons">
-                <button id="clear" type="button">Clear</button>
+                <button disabled={isDisabled} id="clear" type="button">Clear</button>
                 <h3 className="image-title">Draw The <span className="image-name">{logoName}</span> Logo </h3>
-                <button id="next" type="button" onClick={(e) => counter(count)} >Next ➡️</button>
+                <a id="next" onClick={(e) => (counter(count), setIsDisabled(false))} href="#" className="modal-close" title="Close Modal">Skip ➡️</a>
             </div>
             {/* canvas div */}
             <div className="canvas-block">
@@ -215,12 +216,12 @@ const Canvas = () => {
                     <button type="button" value="#ff99ff"/>
                     <button type="button" value="#e8c4e8"/>
                     <button type="button" value="#ffffff"/>
+                    <button type="button" value="#C2E7D9"/>
                 </div>
                 {/* logo reveal button and image */}
                 <div className="logo-container" >
-                    {/* <h3 className="image-title">Draw : <span className="image-name">Tesla's Logo</span> </h3> */}
                     <div className="wrap">
-                        <a href="#show" className="modal-open">Click To Show</a>
+                        <a onClick={(e) => setIsDisabled(true)} href="#show" className="modal-open">Click To Show</a>
                         <div className="overlay" id="show">
                             <div className="modal">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 400">
@@ -229,11 +230,12 @@ const Canvas = () => {
                                     <line id="svg_4" fill="none" stroke="#000000" strokeWidth="2" x1="398" y1="398" x2="398" y2="2.0"/>
                                     <line id="svg_5" fill="none" stroke="#000000" strokeWidth="2" x1="2.0" y1="2.0" x2="2.0" y2="398"/>
                                 </svg>
+                                {/* pop up modal solution image */}
                                 <div className="modal-inner">
                                     <div className="modal-flex">
-                                        <div></div>
+                                        {/* <div></div> */}
                                         <h3 className="image-title">{logoName}</h3>
-                                        <a id="xImage" onClick={(e) => counter(count)} href="#" className="modal-close" title="Close Modal">X</a>
+                                        {/* <a id="xImage" onClick={(e) => (counter(count), setIsDisabled(false))} href="#" className="modal-close" title="Close Modal">NEXT ➡️</a> */}
                                     </div>
                                     <img className="image-block" src={LOGO} alt={logoName} />
                                 </div>

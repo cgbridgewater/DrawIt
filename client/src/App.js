@@ -11,8 +11,6 @@ function App() {
         <Routes>
           <Route path="/" default element={<Indexpage/>} />
         </Routes>
-      
-      
       </BrowserRouter>
 
 
