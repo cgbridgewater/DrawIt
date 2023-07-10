@@ -1,9 +1,6 @@
 .logo-container {
   width: 250px;
   height:50px;
-  /* border: 1px solid #e0e0e0; */
-  /* padding: 10px; */
-  /* margin: 1% 0; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,6 +12,7 @@
 .image-block {
   width:325px;
   height:325px;
+  border-radius: 25px;
 }
 
 .image-name {
@@ -28,7 +26,6 @@
 
 
 /* // Modal CSS // */
-
 svg {
   width:390px;
   height:390px;
@@ -38,26 +35,33 @@ svg {
   margin:0 auto;
   display:block;
 }
+
 svg line {
-  stroke-width:2px;
-  stroke:rgba(2,162,239,1);
+  stroke-width:6px;
+  /* stroke:rgba(2,162,239,1); */
+  stroke:linear-gradient(89.5deg, rgb(4, 29, 55) -0.1%, rgb(2, 67, 135) 25.1%, rgb(28, 133, 243) 49.6%, rgb(115, 181, 250) 74.5%, rgb(214, 239, 253) 99.3%);
 }
+
 svg #svg_2 {
 	stroke-dasharray: 1680;
   stroke-dashoffset: -390;
 }
+
 svg #svg_4 {
 	stroke-dasharray: 1680;
   stroke-dashoffset: -390;
 }
+
 svg #svg_3 {
 	stroke-dasharray: 1680;
   stroke-dashoffset: -390;
 }
+
 svg #svg_5 {
 	stroke-dasharray: 1680;
   stroke-dashoffset: -390;
 }
+
 @keyframes anim-dash {
   70% {
     stroke:rgba(2,162,239,1);
@@ -117,13 +121,6 @@ svg #svg_5 {
   height:20px;
   width:20px;
 }
-/* 
-.modal-inner h3 {
-  display:block;
-  text-align:center;
-  font-size:22px;
-  padding:20px 20px 10px 20px;
-} */
 
 .modal-flex {
   display: flex;
@@ -139,13 +136,13 @@ svg #svg_5 {
 }
 
 .overlay:target .modal svg line{
-  animation: anim-dash .8s forwards;
+  animation: anim-dash 1.6s forwards;
   animation-delay:.2s;
 }
 
 .overlay:target .modal .modal-inner {
-  animation:display 1s forwards;
-  animation-delay:.6s;
+  animation:display 1.5s forwards;
+  animation-delay: .8s;
 }
 
 @keyframes display {
