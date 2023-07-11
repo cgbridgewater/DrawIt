@@ -1,10 +1,7 @@
 
-
 const Title = () => {
-    
 
     return(    
-
         <div>
             <main>
                 <section>
@@ -31,8 +28,6 @@ const Title = () => {
                 <h1 className="banner-sm">Draw the logo from memory!!</h1>
             </main>
         </div>
-
-
     )
 }
 

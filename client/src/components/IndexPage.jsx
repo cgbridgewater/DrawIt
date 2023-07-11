@@ -9,16 +9,12 @@ import Title from "./TitlePage";
 const Indexpage = () => {
     
     return(    
-
         <div>
             <Title/>
             <div className="flex" >
                 <Canvas/>
             </div>
         </div>
-
-
-
     )
 }
 
