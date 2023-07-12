@@ -221,7 +221,7 @@ const Canvas = () => {
                 {/* logo reveal button and image */}
                 <div className="logo-container" >
                     <div className="wrap">
-                        <a onClick={(e) => setIsDisabled(true)} href="#show" className="modal-open">CLICK TO REVEAL</a>
+                        <a onClick={(e) => setIsDisabled(true)} href="#" className="modal-open">CLICK TO REVEAL</a>
                         <div className="overlay" id="show">
                             <div className="modal">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 400">
