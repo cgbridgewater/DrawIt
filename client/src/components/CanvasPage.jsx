@@ -174,9 +174,9 @@ const Canvas = () => {
         <main className="canvas-container">
             {/* top bar div */}
             <div className="buttons">
-                <button disabled={isDisabled} id="clear" type="button">Clear</button>
+                <button disabled={isDisabled} id="clear" type="button">CLEAR</button>
                 <h3 className="image-title">Draw The <span className="image-name">{logoName}</span> Logo </h3>
-                <a id="next" onClick={(e) => (counter(count), setIsDisabled(false))} href="#" className="modal-close" title="Close Modal">Skip ➡️</a>
+                <a id="next" onClick={(e) => (counter(count), setIsDisabled(false))} href="#" className="modal-close" title="Close Modal">NEXT ➡️</a>
             </div>
             {/* canvas div */}
             <div className="canvas-block">
@@ -221,7 +221,7 @@ const Canvas = () => {
                 {/* logo reveal button and image */}
                 <div className="logo-container" >
                     <div className="wrap">
-                        <a onClick={(e) => setIsDisabled(true)} href="#show" className="modal-open">Click To Show</a>
+                        <a onClick={(e) => setIsDisabled(true)} href="#show" className="modal-open">CLICK TO REVEAL</a>
                         <div className="overlay" id="show">
                             <div className="modal">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 400">
@@ -233,9 +233,7 @@ const Canvas = () => {
                                 {/* pop up modal solution image */}
                                 <div className="modal-inner">
                                     <div className="modal-flex">
-                                        {/* <div></div> */}
                                         <h3 className="image-title">{logoName}</h3>
-                                        {/* <a id="xImage" onClick={(e) => (counter(count), setIsDisabled(false))} href="#" className="modal-close" title="Close Modal">NEXT ➡️</a> */}
                                     </div>
                                     <img className="image-block" src={LOGO} alt={logoName} />
                                 </div>
