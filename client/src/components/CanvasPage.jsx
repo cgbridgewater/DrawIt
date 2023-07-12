@@ -19,7 +19,7 @@ const Canvas = () => {
         var mouseX = 0;
         var mouseY = 0;
         context.strokeStyle = 'black'; // initial brush color
-        context.lineWidth = 3; // initial brush width
+        context.lineWidth = 9; // initial brush width
         var isDrawing = false;
 
         // Handle Colors
