@@ -5,7 +5,7 @@ import '../Style/Logo.css';
 import '../Style/Title.css';
 
 
-const Indexpage = () => {
+const MainPage = () => {
     
     return(    
         <div>
@@ -17,4 +17,4 @@ const Indexpage = () => {
     )
 }
 
-export default Indexpage
+export default MainPage
