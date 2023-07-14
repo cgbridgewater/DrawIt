@@ -1,4 +1,4 @@
-import { BrowserRouter,Routes,Route,Navigate } from 'react-router-dom'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import './Style/App.css';
 // import './Style/Canvas.css';
 import Indexpage from './Components/IndexPage';
