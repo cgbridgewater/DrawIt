@@ -1,8 +1,8 @@
 import Canvas from "./CanvasPage"
+import Title from "./TitlePage";
 import '../Style/Canvas.css';
 import '../Style/Logo.css';
 import '../Style/Title.css';
-import Title from "./TitlePage";
 
 
 const Indexpage = () => {

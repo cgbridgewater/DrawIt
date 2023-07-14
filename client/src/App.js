@@ -1,6 +1,5 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import './Style/App.css';
-// import './Style/Canvas.css';
 import Indexpage from './Components/IndexPage';
 
 function App() {
