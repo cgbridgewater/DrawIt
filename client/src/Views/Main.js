@@ -1,5 +1,5 @@
-import Canvas from '../Components/CanvasPage';
-import Title from '../Components/TitlePage'
+import Canvas from "../Components/CanvasPage";
+import Title from "../Components/TitlePage";
 import '../Style/Canvas.css';
 import '../Style/Logo.css';
 import '../Style/Title.css';
