@@ -253,5 +253,4 @@ const Canvas = () => {
         </main>
     )
 }
-
 export default Canvas
