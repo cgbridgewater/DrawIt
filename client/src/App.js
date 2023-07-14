@@ -1,6 +1,6 @@
 
 import './Style/App.css';
-import Main from '../src/Views/Main';
+import Main from './views/Main';
 
 function App() {
   
