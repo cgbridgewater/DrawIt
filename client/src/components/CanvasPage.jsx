@@ -178,7 +178,7 @@ const Canvas = () => {
             <div className="buttons">
                 <button disabled={isDisabled} id="clear" type="button">CLEAR</button>
                 <h3 className="image-title">Draw The <span className="image-name">{logoName}</span> Logo </h3>
-                <a id="next" onClick={(e) => (counter(count), setIsDisabled(false))} href="#" className="modal-close" title="Close Modal">NEXT ➡️</a>
+                <a id="next" onClick={(e) =>{counter(count); setIsDisabled(false)}} href="#next" className="modal-close" title="Close Modal">NEXT ➡️</a>
             </div>
             {/* canvas div */}
             <div className="canvas-block">
