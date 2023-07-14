@@ -1,8 +1,9 @@
-import Canvas from "../components/CanvasPage";
-import Title from "../components/TitlePage";
-import '../Style/Canvas.css';
-import '../Style/Logo.css';
-import '../Style/Title.css';
+import Canvas from "../Components/Canvas";
+import Title from "../Components/Title";
+import '../Style/Canvas.css'
+import '../Style/Logo.css'
+import '../Style/Title.css'
+
 
 const Main = () => {
 
