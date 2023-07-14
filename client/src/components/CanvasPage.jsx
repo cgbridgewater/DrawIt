@@ -64,7 +64,8 @@ const Canvas = () => {
             mouseY = event.clientY - boundings.top ;
         }
 
-        // // Handle Touch Coordinates
+          //////////// NOT TESTED!!!!!
+        // // Handle Touch Coordinates  //////////// NOT TESTED!!!!!
         // function setTouchCoordinates(event) {
         //     mouseX = event.targetTouches[0].pageX - boundings.left;
         //     mouseY = event.targetTouches[0].pageY - boundings.top;
@@ -84,7 +85,8 @@ const Canvas = () => {
             context.clearRect(0, 0, canvas.width, canvas.height);
         });
         
-        // Handle xImage Button
+          //////////// NOT TESTED!!!!!
+        // Handle xImage Button  //////////// NOT TESTED!!!!!
         // var xImage = document.getElementById('xImage');
         // xImage.addEventListener('click', function() {
         //     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -221,7 +223,7 @@ const Canvas = () => {
                 {/* logo reveal button and image */}
                 <div className="logo-container" >
                     <div className="wrap">
-                        <a onClick={(e) => setIsDisabled(true)} href="#" className="modal-open">CLICK TO REVEAL</a>
+                        <a onClick={(e) => setIsDisabled(true)} href="#show" className="modal-open">CLICK TO REVEAL</a>
                         <div className="overlay" id="show">
                             <div className="modal">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 400">
