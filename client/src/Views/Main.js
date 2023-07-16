@@ -9,7 +9,7 @@ const Main = () => {
 
     
     return(
-        <div>
+        <div className="mainContainer">
             <Title/>
             <div className="flex" >
                 <Canvas/>

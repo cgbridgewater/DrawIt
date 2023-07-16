@@ -3,29 +3,18 @@ const Title = () => {
 
     return(    
         <div>
-            <main>
+            <main className="pageTitle">
                 <section>
-                    <p>C</p>
+                    <p>D</p>
+                    <p>R</p>
                     <p>A</p>
-                    <p>N</p>
+                    <p>W</p>
                     <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>Y</p>
-                    <p>O</p>
-                    <p>U</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p><em>R</em></p>
-                    <p><em>E</em></p>
-                    <p><em>M</em></p>
-                    <p><em>E</em></p>
-                    <p><em>M</em></p>
-                    <p><em>B</em></p>
-                    <p><em>E</em></p>
-                    <p><em>R</em></p>
-                    <p><em>?</em></p>
+                    <p>I</p>
+                    <p>T</p>
+                    <p>!</p>
                 </section>
-                <h1 className="banner-sm">Draw the logo from memory!!</h1>
+                <h1 className="banner-sm">Draw the logos from memory!</h1>
             </main>
         </div>
     )
