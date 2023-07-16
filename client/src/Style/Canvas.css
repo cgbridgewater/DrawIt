@@ -11,7 +11,6 @@
 }
 
 .canvas-container {
-    /* width: 50%; */
     min-width: 370px;
     border: 1px solid #e0e0e0;
     padding: 10px;
@@ -24,20 +23,10 @@
 }
 
 .brush-block {
-    width: 350px;
+    width: 354px;
     border: 1px solid #315659;
     background-color: #315659;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
 }
-
-/* .canvas-block {
-    width: 360px;
-    display: flex;
-    justify-content: center; */
-    /* min-width: 370px; */
-/* } */
 
 .brushSpecs {
     width: 350px;
@@ -238,16 +227,12 @@
     border: 0;
     border-radius: 0;
     background-color: #315659;
-    /* margin: 5px;
-    padding: 5px 0; */
-    /* height: 30px; */
     outline: none;
     cursor: pointer;
 }
 
 .brushes button:after {
-    /* height: 1px; */
-    width: 140px;
+    width: 130px;
     background: #0D0221;
     content: '';
 }
@@ -266,9 +251,10 @@
 
 .buttons {
     width: 370px;
+    padding: 0 5px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .buttons button, #next, #xImage {
@@ -281,7 +267,7 @@
     font-weight: 800;
     background-color: #FFEEDB;
     padding: 5px;
-    height: 50px;
+    height: 60px;
     outline: none;
     position: relative;
     cursor: pointer;
