@@ -7,9 +7,9 @@
 <br>
 <br>
 <p>Blank canvas with "Draw The Amazon Logo" </p>
-<img width="70%" src="https://live.staticflickr.com/65535/53041681390_7615c1b05b_w.jpg" alt="draw it screen"/>
+<img width="70%" src="/client/src/Assets/Images/DrawIt2.png" alt="draw it screen"/>
 <br>
 <br>
 <br>
 <p> The Amazon logo revealed</p>
-<img width="70%" src="https://live.staticflickr.com/65535/53041496779_fe9cb3a257_w.jpg" alt="draw it reveal"/>
+<img width="70%" src="/client/src/Assets/Images/DrawIt2.png" alt="draw it reveal"/>
