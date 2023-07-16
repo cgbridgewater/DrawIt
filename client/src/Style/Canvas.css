@@ -251,6 +251,7 @@
 
 .buttons {
     width: 370px;
+    height:90px;
     padding: 0 5px;
     display: flex;
     align-items: center;
@@ -261,20 +262,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 80px;
+    height: 60px;
     border: 1px solid #424242;
     color: #424242;
     font-weight: 800;
     background-color: #FFEEDB;
-    padding: 5px;
-    height: 60px;
+    padding: 3px;
     outline: none;
     position: relative;
     cursor: pointer;
     font-size: 16px;
-}
-
-#paint-canvas {
-    cursor:crosshair;
-    background-color: #C2E7D9;
 }

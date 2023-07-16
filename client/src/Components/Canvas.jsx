@@ -5,7 +5,7 @@ import {useRef} from 'react';
 
 const Canvas = () => {
 
-    const [logoName, setLogoName] = useState("Beats")
+    const [logoName, setLogoName] = useState("Apple")
     const [count, setCount] = useState(0)
     const [isDisabled, setIsDisabled] = useState(false)
     const LOGO = require(`../Assets/Images/${logoName}.png`);
@@ -128,6 +128,7 @@ const Canvas = () => {
                     hideGrid= {true}
                     canvasHeight={354}
                     canvasWidth={354}
+                    mouseZoomFactor={0.01}
                 />
             </div>
             {/* bottom div */}

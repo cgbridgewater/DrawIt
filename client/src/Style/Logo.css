@@ -39,6 +39,7 @@ a.modal-open {
   .image-title {
     color: #FFEEDB;
     text-align: center;
+    width: 160px;
   }
   
   /* // Modal CSS // */
@@ -91,8 +92,8 @@ a.modal-open {
   .overlay {
     background:rgba(0,0,0,.6);
     border: 1px solid #e0e0e0;
-    width: 193px;;
-    height:107%;
+    width: 187px;;
+    height:105%;
     position:absolute;
     top: -3%;
     left: 10;
