@@ -9,16 +9,21 @@ const Canvas = () => {
     const [count, setCount] = useState(0)
     const [isDisabled, setIsDisabled] = useState(false)
     const LOGO = require(`../Assets/Images/${logoName}.png`);
-    const [brushColor , setBrushColor] = useState(10)
-    const [brushRadius , setBrushRadius] = useState(10)
+    const [brushColor , setBrushColor] = useState("")
+    const [brushRadius , setBrushRadius] = useState(3)
     const canvas = useRef();
+
+    // const changeColor = (e) => {
+    //     e.preventDefault();
+    //     setBrushColor(value)
+    // }
 
     window.onload = function () {
         counter(0)
         // Handle Brushes
         var brushes = document.getElementsByClassName('brushes')[0];
         brushes.addEventListener('click', function(event) {
-            var brush = event.target.value || '10';
+            var brush = event.target.value || '3';
             setBrushRadius(brush)
         });
         // // Handle Colors
@@ -28,6 +33,8 @@ const Canvas = () => {
             setBrushColor(color)
         });
     };
+
+
 
     // Count and Image Switch Case Loop
     function counter(count){
@@ -128,12 +135,11 @@ const Canvas = () => {
                     hideGrid= {true}
                     canvasHeight={354}
                     canvasWidth={354}
-                    mouseZoomFactor={0.01}
                 />
             </div>
             {/* bottom div */}
             <div className="brush-block">
-                <div className="brushSpecs">
+                <div className="brushSpecs  desktop-only">
                     {/* brush color */}
                     <div className="colors">
                         <button type="button" value="#0000ff"/>
@@ -174,10 +180,26 @@ const Canvas = () => {
                         <button type="button" value={9}/>
                     </div>
                 </div>
+                <div className="brushSpecs  mobile-only">
+                    <select disabled={isDisabled} onChange={(e) =>setBrushColor(e.target.value)} className="brushes dropdown" >
+                        <option style={{backgroundColor:"black",color:"white"}} value="black">Black</option>
+                        <option style={{backgroundColor:"red",color:"white"}} value="red">Red</option>
+                        <option style={{backgroundColor:"blue",color:"white"}} value="blue">Blue</option>
+                        <option style={{backgroundColor:"green",color:"white"}} value="green">Green</option>
+                        <option style={{backgroundColor:"yellow",color:"black"}} value="yellow">Yellow</option>
+                        <option style={{backgroundColor:"silver",color:"black"}} value="silver">Silver</option>
+                    </select>
+                    <select disabled={isDisabled} onChange={(e) =>setBrushRadius(e.target.value)} className="brushes dropdown" >
+                        <option value={3}>3px</option>
+                        <option value={6}>6px</option>
+                        <option value={9}>9px</option>
+                    </select>
+                </div>
                 {/* logo reveal button and image */}
                 <div className="logo-container" >
                     <div className="wrap">
-                        <a onClick={() =>setIsDisabled(true)} href="#show" className="modal-open">CLICK TO REVEAL</a>
+                        <a disabled={isDisabled} onClick={() =>setIsDisabled(true)} href="#show" className="modal-open">CLICK TO REVEAL</a>
+
                         <div className="overlay" id="show">
                             <div className="modal">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 400">
@@ -194,6 +216,7 @@ const Canvas = () => {
                                     <img className="image-block" src={LOGO} alt={logoName} />
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
