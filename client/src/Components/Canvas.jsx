@@ -121,14 +121,13 @@ const Canvas = () => {
                 <CanvasDraw
                     ref={canvas}
                     style={{
-                        boxShadow:
-                        "0 13px 27px -5px rgba(50, 50, 93, 0.25),    0 8px 16px -8px rgba(0, 0, 0, 0.3)"
+                        border:"5px solid #315659"
                     }}
                     brushColor={brushColor} 
                     brushRadius={brushRadius}
                     hideGrid= {true}
-                    canvasHeight={350}
-                    canvasWidth={350}
+                    canvasHeight={354}
+                    canvasWidth={354}
                 />
             </div>
             {/* bottom div */}
@@ -181,10 +180,10 @@ const Canvas = () => {
                         <div className="overlay" id="show">
                             <div className="modal">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 400">
-                                    <line id="svg_3" fill="none" stroke="#000000" strokeWidth="2" x1="2.0" y1="2.0" x2="398" y2="2.0"/>
-                                    <line id="svg_2" fill="none" stroke="#000000" strokeWidth="2" x1="398" y1="398" x2="2.0" y2="398"/>
-                                    <line id="svg_4" fill="none" stroke="#000000" strokeWidth="2" x1="398" y1="398" x2="398" y2="2.0"/>
-                                    <line id="svg_5" fill="none" stroke="#000000" strokeWidth="2" x1="2.0" y1="2.0" x2="2.0" y2="398"/>
+                                    <line id="svg_3" fill="none" stroke="#000000" strokeWidth="2" x1="2.0" y1="2.0" x2="400" y2="2.0"/>
+                                    <line id="svg_2" fill="none" stroke="#000000" strokeWidth="2" x1="400" y1="400" x2="2.0" y2="400"/>
+                                    <line id="svg_4" fill="none" stroke="#000000" strokeWidth="2" x1="400" y1="400" x2="400" y2="2.0"/>
+                                    <line id="svg_5" fill="none" stroke="#000000" strokeWidth="2" x1="2.0" y1="2.0" x2="2.0" y2="400"/>
                                 </svg>
                                 {/* pop up modal solution image */}
                                 <div className="modal-inner">
