@@ -7,7 +7,7 @@
 <br>
 <br>
 <p>Blank canvas with "Draw The Amazon Logo" </p>
-<img width="70%" src="/client/src/Assets/Images/DrawIt2.png" alt="draw it screen"/>
+<img width="70%" src="/client/src/Assets/Images/DrawIt.png" alt="draw it screen"/>
 <br>
 <br>
 <br>
